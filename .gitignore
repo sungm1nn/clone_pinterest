@@ -80,3 +80,7 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 .env
+
+db.sqlite3
+
+.idea/
