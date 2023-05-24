@@ -2,23 +2,25 @@
 
 {% block content %}
 
-    <style>
-        .testing{
-            background-color: white;
-            height: 3rem;
-            width: 3rem;
-            margin: 1rem;
-        }
-    </style>
-
-    <div style="height: 20rem; background-color: #38df81; border-radius: 1rem; margin: 2rem;">
-        <h1>
-            testing
+    <div style="border-radius: 1rem; margin: 2rem; text-align: center">
+        <h1 style="font-family: 'Monomaniac One', sans-serif, cursive;">
+            Hello World LIST!
         </h1>
-        <div class="testing" style="display: block;">aa</div>
-        <div class="testing" style="display: inline;">bb</div>
-        <div class="testing" style="display: None;">cc</div>
-        <div class="testing" style="display: inline-block">dd</div>
-        <div class="testing">ee</div>
+        
+        <form action="/account/hello_world/" method="post">
+            {% csrf_token %}
+            <div>
+                <input type="text" name="hello_world_input">
+            </div>
+            <div>
+                <input type="submit" class="btn btn-primary" value="POST">
+            </div>
+        </form>
+        {% if hello_world_output %}
+        <h1>
+            {{hello_world_output.text}}
+        </h1>
+        {% endif %}
+
     </div>
 {% endblock %}
