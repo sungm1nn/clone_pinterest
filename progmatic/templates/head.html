@@ -15,4 +15,28 @@
 
     <!-- Default CSS link -->
     <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+
+    <!-- Naver font -->
+    <style>
+        @font-face {
+            font-family: NanumSquareL;
+            src: local('NanumSquareL') 
+            url("{% static 'font/NanumSquareL.otf' %}") format("opentype");
+        }
+        @font-face {
+            font-family: NanumSquareB;
+            src: local('NanumSquareB') 
+            url("{% static 'font/NanumSquareB.otf' %}") format("opentype");
+        }
+        @font-face {
+            font-family: NanumSquareEB;
+            src: local('NanumSquareEB') 
+            url("{% static 'font/NanumSquareEB.otf' %}") format("opentype");
+        }
+        @font-face {
+            font-family: NanumSquareR;
+            src: local('NanumSquareR') 
+            url("{% static 'font/NanumSquareR.otf' %}") format("opentype");
+        }
+    </style>
 </head>
