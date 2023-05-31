@@ -8,5 +8,35 @@
     text-align:center; margin-top: 2rem;
 }
 .progmatic_header {
-    text-align:center; margin: 2rem 0;
+    text-align:center; 
+    margin: 2rem 0;
+}
+
+@media screen and (max-width:500px) {
+    html{
+        font-size: 13px;
+    }
+}
+
+a {
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:hover,a:focus {
+    color:rgb(73, 131, 207);
+    /* text-decoration:none; */
+    cursor:grab;
+    font-weight: bolder;
+    transition: .8s;
+    
+    /* font-size: 1.3rem; */
+}
+
+.progmatic_header_nav {
+    margin: 0 0.5rem;
+}
+
+.progmatic_header_navbar{
+    margin: 1rem 0;
 }

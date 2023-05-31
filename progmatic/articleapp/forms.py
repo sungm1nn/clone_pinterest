@@ -5,4 +5,4 @@ from articleapp.models import Articles
 class ArticleCreationForm(ModelForm):
     class Meta:
         model = Articles
-        fields =['title', 'image', 'content']
+        fields =['title', 'image', 'project', 'content']

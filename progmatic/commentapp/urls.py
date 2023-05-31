@@ -13,16 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf import settings
-from django.contrib import admin
-from django.urls import include, path
-from django.conf.urls.static import static
+from django.urls import path
+
+from commentapp.views import CommentCreateView, CommentdeleteView
+
+app_name = 'commentapp'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('accountapp.urls')),
-    path('profiles/', include('profileapp.urls')),
-    path('articles/', include('articleapp.urls')),
-    path('comments/', include('commentapp.urls')),
-    path('projects/', include('projectapp.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('create/', CommentCreateView.as_view(), name='create'),
+    path('delete/<int:pk>', CommentdeleteView.as_view(), name='delete'),
+]
