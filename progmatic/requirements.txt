@@ -7,9 +7,11 @@ bs4==0.0.1
 certifi==2022.12.7
 chardet==3.0.4
 charset-normalizer==3.0.1
+command-not-found==0.3
 cryptography==3.4.8
 dbus-python==1.2.18
 distro==1.7.0
+distro-info===1.1build1
 Django==4.1.6
 django-bootstrap-modal-forms==2.2.1
 django-bootstrap4==23.1
@@ -42,6 +44,7 @@ PyGObject==3.42.1
 PyJWT==2.3.0
 pyparsing==2.4.7
 PySocks==1.7.1
+python-apt==2.4.0+ubuntu1
 PyYAML==5.4.1
 requests==2.28.2
 rfc3986==1.5.0
